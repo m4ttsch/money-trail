@@ -390,6 +390,7 @@
   cursor: grab;
   touch-action: none;
   position: relative;
+  user-select: none;
 }
 .map-canvas-wrap.grabbing {
   cursor: grabbing;

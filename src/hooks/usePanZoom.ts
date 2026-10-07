@@ -43,6 +43,7 @@ export function usePanZoom(contentW: number, contentH: number) {
 
   const onPointerDown = useCallback(
     (e: React.PointerEvent) => {
+      e.preventDefault()
       setIsDragging(true)
       ;(e.target as Element).setPointerCapture?.(e.pointerId)
       dragStart.current = { x: e.clientX, y: e.clientY, px: transform.x, py: transform.y }
